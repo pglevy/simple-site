@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pglevy/simple-site/issues"
   },
-  "homepage": "https://github.com/pglevy/simple-site#readme"
+  "homepage": "https://github.com/pglevy/simple-site#readme",
+  "dependencies": {
+    "uswds": "^2.8.1"
+  }
 }
