@@ -30,6 +30,7 @@ sass:
   sass_dir: assets/uswds-2.8.1/scss
 ~~~
 1. Create a "placeholder" *SCSS* file for the compiled SASS to be copied to.
+  - Create `(site root)/assets/css` folder and add `main.css`.
   - When the site builds, it will create a *CSS* file in the same location.
 1. Add an import statement to the target SCSS file:
   - Note: it must include the "front matter" dashes at the top so the compiler knows what to do with it:
