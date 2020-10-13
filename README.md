@@ -3,22 +3,24 @@ testing procedure for spinning up a plain, new jekyll site for dummies (like me)
 
 ## Basic installation
 Note to future self. Here's what I did:
-1. Create repo on github
-  - Add readme and jekyll flavor of .gitignore
-1. Create gem file locally by running `bundle init`.
-1. Add the Github pages gem:
+1. Create repo on github.
+  - Add readme and jekyll flavor of .gitignore.
+1. Clone to computer (using Github Desktop).
+1. Create gem file locally by using Terminal to run `bundle init` in the repo location.
+1. Add the Github pages gem (replacing existing Gemfile contents):
   ```
-  Add the following in the gemfile (replacing the existing contents):
   source 'https://rubygems.org'
   gem 'github-pages'
 ```
 1. Run `bundle install` to get all the necessary things.
 1. Add a blank `_config.yml` file.
   - Not totally necessary at this point, as GH pages will just use defaults, but will probably use later and gets rid of warning message during build.
-
+1. Add `.DS_Store` to `.gitignore` file.
+1. Commit the current version.
 At this point, you have a basic jekyll site (with no theme) that will build locally and automatically as a Github pages site.
+1. Try running `bundle exec jekyll serve` to confirm you can run the site locally.
 
-## Adding a CSS framework
+## Adding the USWDS CSS framework
 I thought I wanted to install USWDS using npm, but that was too complicated for me.
 
 Instead, I leveraged the built-in sass compiler of Jekyll like so:
@@ -29,8 +31,8 @@ Instead, I leveraged the built-in sass compiler of Jekyll like so:
 sass:
   sass_dir: assets/uswds-2.8.1/scss
 ~~~
-1. Create a "placeholder" *SCSS* file for the compiled SASS to be copied to.
-  - Create `(site root)/assets/css` folder and add `main.css`.
+4. Create a "placeholder" *SCSS* file for the compiled SASS to be copied to.
+  - Create `(site root)/assets/css` folder and add `main.scss`.
   - When the site builds, it will create a *CSS* file in the same location.
 1. Add an import statement to the target SCSS file:
   - Note: it must include the "front matter" dashes at the top so the compiler knows what to do with it:
